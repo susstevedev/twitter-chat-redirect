@@ -23,12 +23,9 @@
 
         window.addEventListener('popstate', function(event) {
             console.log('popstate event triggered');
-            window.location.pathname = "/messages/home";
-        });
-
-        window.addEventListener('location', function(event) {
-            console.log('location event triggered');
-            window.location.pathname = "/messages/home";
+            if (window.location.pathname === "/i/chat") {
+                window.location.pathname = "/messages/home";
+            }
         });
     }
 
